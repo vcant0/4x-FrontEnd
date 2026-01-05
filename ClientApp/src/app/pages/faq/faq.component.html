@@ -1,0 +1,117 @@
+<div class="faq-container">
+  <div class="faq-header">
+    <h1>Preguntas Frecuentes</h1>
+    <p>Encuentra respuestas a las preguntas más comunes sobre nuestros servicios.</p>
+  </div>
+
+  <div class="search-container" *ngIf="!isLoading && !error">
+    <div class="search-box">
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        (input)="searchFaqs()"
+        placeholder="Buscar en preguntas frecuentes..."
+        [disabled]="isLoading"
+      >
+      <i class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </i>
+    </div>
+  </div>
+
+  <div class="loading-container" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Cargando preguntas frecuentes...</p>
+  </div>
+
+  <div class="error-container" *ngIf="error && !isLoading">
+    <div class="error-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+    </div>
+    <p>{{ error }}</p>
+    <button class="retry-button" (click)="loadFaqs()">Reintentar</button>
+  </div>
+
+  <div class="faq-content" *ngIf="!isLoading && !error">
+    <div class="categories-sidebar">
+      <h3>Categorías</h3>
+      <ul>
+        <li 
+          [class.active]="selectedCategory === 'Todas'"
+          (click)="filterByCategory('Todas')">
+          Todas las categorías
+        </li>
+        <li 
+          *ngFor="let category of categories"
+          [class.active]="selectedCategory === category"
+          (click)="filterByCategory(category)">
+          {{ category }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="faq-list">
+      <div *ngIf="filteredFaqs.length === 0" class="no-results">
+        <p>No se encontraron preguntas que coincidan con tu búsqueda.</p>
+      </div>
+
+      <div *ngFor="let faq of filteredFaqs" class="faq-item" [class.open]="faq.isOpen">
+        <div class="faq-question" (click)="toggleAnswer(faq)">
+          <h3>{{ faq.question }}</h3>
+          <span class="toggle-icon">
+            <svg *ngIf="!faq.isOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <svg *ngIf="faq.isOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </span>
+        </div>
+        <div class="faq-answer" [class.open]="faq.isOpen">
+          <div class="answer-content" [innerHTML]="faq.answer"></div>
+          <div *ngIf="faq.keywords" class="faq-keywords">
+            <strong>Palabras clave:</strong> {{ faq.keywords }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer__content">
+    <div class="footer__left">
+      <div class="footer__brand">
+        <img src="/assets/logo-dark.png" alt="4x Software" class="footer__logo" />
+      </div>
+      <div class="footer__copy">Copyright © 2025 4x Software</div>
+      <div class="footer__rights">All rights reserved</div>
+      <div class="footer__social">
+        <a class="footer__icon" href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+        </a>
+        <a class="footer__icon" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6 2.5 2.5 0 0 1 4.98 3.5zM3 8h4v13H3zM9 8h3.8v1.9h.06A4.16 4.16 0 0 1 16.5 8c3.3 0 3.9 2.2 3.9 5v8H16v-7.1c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8V21H9z"/></svg>
+        </a>
+        <a class="footer__icon" href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.6 4.5 12 4.5 12 4.5s-7.6 0-9.4.6A3 3 0 0 0 .5 7.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-4.8zM9.75 15.02v-6l6 3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__right">
+      <ul class="footer__links">
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/faq">FAQ</a></li>
+        <li><a routerLink="/tutoriales">Tutoriales</a></li>
+        <li><a routerLink="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

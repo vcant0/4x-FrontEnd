@@ -1,0 +1,101 @@
+<div class="contact-form-container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Nombre completo *</label>
+      <input type="text" id="name" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
+      <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+        <div *ngIf="f['name'].errors['required']">El nombre es requerido</div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Correo electrónico *</label>
+      <input type="email" id="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+        <div *ngIf="f['email'].errors['required']">El correo electrónico es requerido</div>
+        <div *ngIf="f['email'].errors['email']">Por favor ingresa un correo electrónico válido</div>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone">Teléfono *</label>
+      <input type="tel" id="phone" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }" placeholder="Ej: +56 9 1234 5678">
+      <div *ngIf="submitted && f['phone'].errors" class="invalid-feedback">
+        <div *ngIf="f['phone'].errors['required']">El teléfono es requerido</div>
+        <div *ngIf="f['phone'].errors['pattern']">Por favor ingresa un número de teléfono válido</div>
+      </div>
+    </div>
+
+    <!-- Entity Name -->
+    <div class="form-group">
+      <label for="entity">Entidad/Empresa *</label>
+      <input type="text" id="entity" formControlName="entity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['entity'].errors }">
+      <div *ngIf="submitted && f['entity'].errors" class="invalid-feedback">
+        <div *ngIf="f['entity'].errors['required']">La entidad/empresa es requerida</div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="form-group">
+      <label for="location">Ubicación *</label>
+      <input type="text" id="location" formControlName="location" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['location'].errors }" placeholder="Ciudad, País">
+      <div *ngIf="submitted && f['location'].errors" class="invalid-feedback">
+        <div *ngIf="f['location'].errors['required']">La ubicación es requerida</div>
+      </div>
+    </div>
+
+    <!-- Members Count -->
+    <div class="form-group">
+      <label for="members">Número de miembros *</label>
+      <select id="members" formControlName="members" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['members'].errors }">
+        <option value="">Selecciona una opción</option>
+        <option value="1-100">1-100</option>
+        <option value="101-400">101-400</option>
+        <option value="+400">+400</option>
+      </select>
+      <div *ngIf="submitted && f['members'].errors" class="invalid-feedback">
+        <div *ngIf="f['members'].errors['required']">El número de miembros es requerido</div>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group">
+      <label for="message">Mensaje <span class="text-danger">*</span></label>
+      <textarea 
+        id="message" 
+        formControlName="message" 
+        rows="5" 
+        class="form-control" 
+        [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"
+        placeholder="Por favor, cuéntanos más sobre tu consulta (mínimo 10 caracteres)">
+      </textarea>
+      <div *ngIf="submitted && f['message'].errors" class="invalid-feedback">
+        <div *ngIf="f['message'].errors['required']">El mensaje es obligatorio</div>
+        <div *ngIf="f['message'].errors['minlength']">El mensaje debe tener al menos 10 caracteres</div>
+        <div *ngIf="f['message'].errors['maxlength']">El mensaje no puede tener más de 5000 caracteres</div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group text-center">
+      <button type="submit" class="submit-btn" [disabled]="loading || contactForm.invalid">
+        <span *ngIf="!loading" class="btn-content">
+          <i class="fas fa-paper-plane"></i> Enviar mensaje
+        </span>
+        <span *ngIf="loading" class="btn-content">
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Enviando...
+        </span>
+      </button>
+    </div>
+
+    <!-- Help Text -->
+    <p class="help-text">
+      ¡Te contactaremos en los próximos días!
+    </p>
+  </form>
+</div>

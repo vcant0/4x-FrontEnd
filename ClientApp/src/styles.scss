@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Variables CSS para mejor adaptabilidad */
+:root {
+  --max-width: 1200px;
+  --content-padding: clamp(16px, 4vw, 24px);
+  --section-gap: clamp(24px, 6vw, 56px);
+  --font-size-base: clamp(14px, 2vw, 16px);
+  --font-size-h1: clamp(28px, 5vw, 40px);
+  --font-size-h2: clamp(24px, 4vw, 32px);
+  --font-size-h3: clamp(20px, 3vw, 24px);
+  --transition-base: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* Prevenir zoom en iOS al hacer doble tap */
+  touch-action: manipulation;
+  /* Mejor renderizado de fuentes */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html, body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+/* Mejoras para imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mejoras de accesibilidad y touch */
+button, a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevenir selección de texto accidental en móviles */
+@media (max-width: 768px) {
+  button, a {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}

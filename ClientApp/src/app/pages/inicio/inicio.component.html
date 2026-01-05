@@ -1,0 +1,207 @@
+<section class="hero">
+  <div class="hero__content">
+    <div class="hero__left">
+      <h1 class="hero__title">
+        Un sistema moderno pensado para <span class="hero__highlight">clubes deportivos, bomberos, ONGs, academias y otras entidades de cobros.</span>
+      </h1>
+      <p class="hero__sub">
+        Simplificá la administración, mejorá la experiencia de tus miembros y llevá tu organización al siguiente nivel con un sistema 100% online, seguro y adaptable.
+      </p>
+      <a routerLink="/contacto" class="hero__cta">
+        Solicitar Demo
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="hero__right">
+      <img src="/assets/hero.png" alt="Ilustración del sistema 4x" class="hero__image" />
+    </div>
+  </div>
+ </section>
+
+<section class="intro">
+  <div class="intro__content">
+    <h2 class="intro__title">Un sistema pensado para <span class="intro__break">organizaciones modernas.</span></h2>
+    <p class="intro__sub">Digitalizá la gestión, ahorrá tiempo y ofrecé comodidad con herramientas 100% online.</p>
+  </div>
+  <!-- Debajo de esta sección irán las características -->
+</section>
+
+<section class="features">
+  <div class="features__content">
+    <app-feature-card iconId="icon1" title="App de miembros multiplataforma" subtitle="Todo en un solo lugar." text="Accedé a credencial virtual, recibos, deudas, pagos, historial y datos desde cualquier dispositivo."></app-feature-card>
+    <app-feature-card iconId="icon2" title="App vía WhatsApp" subtitle="Tu club, en tu chat." text="Consultá recibos, pagos, historial y más, directamente desde WhatsApp. Sin descargar nada."></app-feature-card>
+    <app-feature-card iconId="icon3" title="Administración organizacional" subtitle="Gestión total para tu equipo." text="Roles personalizados para manejar miembros, liquidaciones, cobradores y reportes desde una sola plataforma."></app-feature-card>
+    <app-feature-card iconId="icon4" title="Pagos por Red Link" subtitle="Pagá como quieras." text="Aboná cuotas por Cuenta DNI, BNA+, Homebanking o cajeros automáticos con seguridad total."></app-feature-card>
+    <app-feature-card iconId="icon5" title="Correos masivos" subtitle="Comunicación eficiente." text="Envío automático de recibos y recordatorios de vencimientos a todos los miembros en pocos clics."></app-feature-card>
+    <app-feature-card iconId="icon6" title="Reserva de canchas" subtitle="Tu lugar, asegurado." text="Reservá espacios desde la app, rápido y sin llamadas. Gestión integral de turnos."></app-feature-card>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="clients__content">
+    <h2 class="clients__title">Nuestros Clientes</h2>
+    <p class="clients__sub">Organizaciones de toda la región que ya optimizan su gestión con 4x</p>
+    <div class="clients__logos">
+      <img src="/assets/clients/client1.jpg" alt="Cliente 1" class="clients__logo" />
+      <img src="/assets/clients/client2.png" alt="Cliente 2" class="clients__logo" />
+      <img src="/assets/clients/client3.jpg" alt="Cliente 3" class="clients__logo" />
+      <img src="/assets/clients/client4.png" alt="Cliente 4" class="clients__logo" />
+      <img src="/assets/clients/client5.jpg" alt="Cliente 5" class="clients__logo" />
+      <img src="/assets/clients/client6.png" alt="Cliente 6" class="clients__logo" />
+      <img src="/assets/clients/client7.png" alt="Cliente 7" class="clients__logo" />
+    </div>
+  </div>
+  </section>
+
+<section class="plans">
+  <div class="plans__header">
+    <h2 class="plans__title">Planes Socios4x</h2>
+    <p class="plans__sub">Elegí el que mejor se adapte a tu organización<br><span class="plans__sub-note">Escalá cuando tu organización lo necesite</span></p>
+  </div>
+  <div class="plans__content">
+    <app-plan-card
+      title="Plan Básico"
+      [features]="[
+        { label: 'Gestión básica completa', included: true },
+        { label: 'Subdominio propio y sitio seguro', included: true },
+        { label: 'Copias de seguridad automáticas', included: true },
+        { label: 'Puntos de Cobro / Cobradores', included: true },
+        { label: 'Pagos por Red Link', included: true },
+        { label: 'App Mobile para socios', included: false },
+        { label: 'Notificaciones por correo electrónico', included: false },
+        { label: 'Reserva de canchas online', included: false },
+        { label: 'Aviso de pago online (Red Link)', included: false },
+        { label: 'App de WhatsApp para socios', included: false },
+        { label: 'Notificaciones automáticas por WhatsApp', included: false }
+      ]"
+    ></app-plan-card>
+
+    <app-plan-card
+      title="Plan Intermedio"
+      [features]="[
+        { label: 'Gestión básica completa', included: true },
+        { label: 'Subdominio propio y sitio seguro', included: true },
+        { label: 'Copias de seguridad automáticas', included: true },
+        { label: 'Puntos de Cobro / Cobradores', included: true },
+        { label: 'Pagos por Red Link', included: true },
+        { label: 'App Mobile para socios', included: true },
+        { label: 'Notificaciones por correo electrónico', included: true },
+        { label: 'Reserva de canchas online', included: false },
+        { label: 'Aviso de pago online (Red Link)', included: false },
+        { label: 'App de WhatsApp para socios', included: false },
+        { label: 'Notificaciones automáticas por WhatsApp', included: false }
+      ]"
+    ></app-plan-card>
+
+    <app-plan-card
+      title="Plan Full"
+      [features]="[
+        { label: 'Gestión básica completa', included: true },
+        { label: 'Subdominio propio y sitio seguro', included: true },
+        { label: 'Copias de seguridad automáticas', included: true },
+        { label: 'Puntos de Cobro / Cobradores', included: true },
+        { label: 'Pagos por Red Link', included: true },
+        { label: 'App Mobile para socios', included: true },
+        { label: 'Notificaciones por correo electrónico', included: true },
+        { label: 'Reserva de canchas online', included: true },
+        { label: 'Aviso de pago online (Red Link)', included: true },
+        { label: 'App de WhatsApp para socios', included: true },
+        { label: 'Notificaciones automáticas por WhatsApp', included: true }
+      ]"
+    ></app-plan-card>
+  </div>
+</section>
+
+<section class="value">
+  <div class="value__content">
+    <div class="value__left">
+      <h2 class="value__title">
+        Hacemos que la gestión de tu organización<br>
+        <span class="value__highlight">sea simple y eficiente</span>
+      </h2>
+      <p class="value__sub">Un sistema creado para organizaciones que quieren crecer y brindar la mejor experiencia a sus miembros.</p>
+    </div>
+    <div class="value__right">
+      <div class="value-item">
+        <div class="value-item__icon"><img src="assets/icons/icon1.svg" alt="" class="icon"></div>
+        <div class="value-item__text">
+          <div class="value-item__title">Miembros conectados</div>
+          <div class="value-item__sub">Members</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-item__icon"><img src="assets/icons/icon3.svg" alt="" class="icon"></div>
+        <div class="value-item__text">
+          <div class="value-item__title">Gestión inteligente</div>
+          <div class="value-item__sub">Clubs</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-item__icon"><img src="assets/icons/icon6.svg" alt="" class="icon"></div>
+        <div class="value-item__text">
+          <div class="value-item__title">Reservas online</div>
+          <div class="value-item__sub">Event Bookings</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-item__icon"><img src="assets/icons/icon4.svg" alt="" class="icon"></div>
+        <div class="value-item__text">
+          <div class="value-item__title">Pagos sin complicaciones</div>
+          <div class="value-item__sub">Payments</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta__content">
+    <div class="cta__left">
+      <h2 class="cta__title">¿Listo para dar el siguiente paso en la gestión de tu organización?</h2>
+      <p class="cta__sub">Hablemos hoy y descubrí cómo 4x puede ayudarte.</p>
+      <a routerLink="/contacto" class="cta__button">Contactanos Ahora</a>
+    </div>
+    <div class="cta__right">
+      <img src="/assets/cta.png" alt="Ilustración contacto" class="cta__image" />
+    </div>
+  </div>
+</section>
+
+
+<section class="promo">
+  <div class="promo__content">
+    <h2 class="promo__title">No pierdas la oportunidad para mejorar la gestión de tu organización</h2>
+    <a routerLink="/contacto" class="promo__button">Solicitar Demo →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__content">
+    <div class="footer__left">
+      <div class="footer__brand">
+        <img src="/assets/logo-dark.png" alt="4x Software" class="footer__logo" />
+      </div>
+      <div class="footer__copy">Copyright © 2025 4x Software</div>
+      <div class="footer__rights">All rights reserved</div>
+      <div class="footer__social">
+        <a class="footer__icon" href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+        </a>
+        <a class="footer__icon" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6 2.5 2.5 0 0 1 4.98 3.5zM3 8h4v13H3zM9 8h3.8v1.9h.06A4.16 4.16 0 0 1 16.5 8c3.3 0 3.9 2.2 3.9 5v8H16v-7.1c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8V21H9z"/></svg>
+        </a>
+        <a class="footer__icon" href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.6 4.5 12 4.5 12 4.5s-7.6 0-9.4.6A3 3 0 0 0 .5 7.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-4.8zM9.75 15.02v-6l6 3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__right">
+      <ul class="footer__links">
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/faq">FAQ</a></li>
+        <li><a routerLink="/tutoriales">Tutoriales</a></li>
+        <li><a routerLink="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

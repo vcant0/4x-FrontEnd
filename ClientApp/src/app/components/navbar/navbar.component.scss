@@ -1,0 +1,138 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 14px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2b2e3a;
+}
+
+.brand__logo { height: 40px; display: block; }
+
+.brand__text { display: none; }
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto; 
+}
+
+.navbar__links a {
+  text-decoration: none;
+  color: #6b7280; /* gray-500 */
+  font-weight: 500; /* Inter Medium */
+}
+
+.navbar__links a.active {
+  color: #111827; /* gray-900 */
+}
+
+.navbar__cta {
+  background: linear-gradient(90deg, #2290ff, #1e78e7);
+  color: #fff;
+  font-weight: 500; /* Inter Medium */
+  padding: 9.74px 22.27px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__cta .arrow { opacity: 0.9; }
+
+/* Keep CTA text white always */
+.navbar__cta,
+.navbar__cta:visited,
+.navbar__cta:hover,
+.navbar__cta:focus {
+  color: #fff;
+}
+
+/* In case generic link styles apply within the list */
+.navbar__links .navbar__cta {
+  color: #fff;
+}
+
+/* Toggle (hidden on desktop) */
+.navbar__toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+  flex-direction: column;
+}
+
+.navbar__toggle .bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #111827;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Animate to X when open */
+.navbar.is-open .navbar__toggle .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.navbar.is-open .navbar__toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+.navbar.is-open .navbar__toggle .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: clamp(8px, 2vw, 12px);
+    padding: 14px var(--content-padding, clamp(12px, 3vw, 24px));
+  }
+
+  /* Show hamburger button */
+  .navbar__toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  /* Collapse links by default */
+  .navbar__links {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Expand when nav has is-open */
+  .navbar.is-open .navbar__links {
+    display: flex;
+  }
+
+  /* Keep CTA on first row; optionally it can wrap below depending on width */
+  .navbar__cta {
+    order: initial;
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+

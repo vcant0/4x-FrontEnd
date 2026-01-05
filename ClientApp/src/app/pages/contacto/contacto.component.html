@@ -1,0 +1,96 @@
+<div class="contact-page">
+  <div class="contact-container">
+    <!-- Header Section -->
+    <div class="contact-header">
+      <h1>Hablemos de cómo 4x puede ayudarte</h1>
+      <p>Completá el formulario y nuestro equipo se pondrá en contacto contigo en menos de 24 horas para resolver tus dudas, mostrarte el sistema en acción o asesorarte sobre los planes disponibles.</p>
+    </div>
+
+    <div class="contact-content">
+      <!-- Left Column - Informational Block -->
+      <div class="info-column">
+        <div class="title-container">
+          <h2>Lo que podés solicitar</h2>
+          <h3>desde aquí</h3>
+        </div>
+        
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="bullet"></span>
+            <span class="text">Una demo personalizada para tu organización</span>
+          </li>
+          <li class="info-item">
+            <span class="bullet"></span>
+            <span class="text">Información sobre precios y planes mensuales</span>
+          </li>
+          <li class="info-item">
+            <span class="bullet"></span>
+            <span class="text">Detalles sobre la configuración inicial y migración de datos</span>
+          </li>
+          <li class="info-item">
+            <span class="bullet"></span>
+            <span class="text">Una demo personalizada para tu organización</span>
+          </li>
+        </ul>
+
+        <div class="info-box">
+          <h3>¿Tenés dudas?</h3>
+          <p>Nuestro equipo está disponible para responder cualquier pregunta.</p>
+        </div>
+      </div>
+
+      <!-- Right Column - Form -->
+      <div class="form-column">
+        <!-- Message Overlay -->
+        <div *ngIf="mensajeExito || mensajeError" class="message-overlay">
+          <div class="message-popup" [class.success]="mensajeExito" [class.error]="mensajeError">
+            <button class="close-btn" (click)="closeMessage()">&times;</button>
+            <div class="message-content">
+              <i class="icon" [class.success-icon]="mensajeExito" [class.error-icon]="mensajeError">
+                <svg *ngIf="mensajeExito" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <svg *ngIf="mensajeError" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+              </i>
+              <p>{{ mensajeExito || mensajeError }}</p>
+            </div>
+          </div>
+        </div>
+
+        <app-contacto-form (formSubmit)="onFormSubmit($event)" [loading]="loading"></app-contacto-form>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer__content">
+    <div class="footer__left">
+      <div class="footer__brand">
+        <img src="/assets/logo-dark.png" alt="4x Software" class="footer__logo" />
+      </div>
+      <div class="footer__copy">Copyright © 2025 4x Software</div>
+      <div class="footer__rights">All rights reserved</div>
+      <div class="footer__social">
+        <a class="footer__icon" href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm5.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"/></svg>
+        </a>
+        <a class="footer__icon" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6 2.5 2.5 0 0 1 4.98 3.5zM3 8h4v13H3zM9 8h3.8v1.9h.06A4.16 4.16 0 0 1 16.5 8c3.3 0 3.9 2.2 3.9 5v8H16v-7.1c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8V21H9z"/></svg>
+        </a>
+        <a class="footer__icon" href="https://www.youtube.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.6 4.5 12 4.5 12 4.5s-7.6 0-9.4.6A3 3 0 0 0 .5 7.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-4.8zM9.75 15.02v-6l6 3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__right">
+      <ul class="footer__links">
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/faq">FAQ</a></li>
+        <li><a routerLink="/tutoriales">Tutoriales</a></li>
+        <li><a routerLink="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

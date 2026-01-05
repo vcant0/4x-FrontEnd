@@ -1,0 +1,16 @@
+{
+  "name": "4x-fullstack",
+  "version": "1.0.0",
+  "description": "Aplicación completa 4x con frontend Angular y backend Express",
+  "scripts": {
+    "install:all": "npm install && cd ClientApp && npm install && cd ../server && npm install",
+    "start:backend": "cd server && npm start",
+    "start:frontend": "cd ClientApp && npm start",
+    "build:frontend": "cd ClientApp && npm run build",
+    "start:prod": "cd server && NODE_ENV=production npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

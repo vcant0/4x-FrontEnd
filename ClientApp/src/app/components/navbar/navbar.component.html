@@ -1,0 +1,33 @@
+<nav class="navbar" [class.is-open]="isMenuOpen">
+  <div class="navbar__brand">
+    <a routerLink="/" class="brand__link" aria-label="Inicio">
+      <img src="/assets/logo-light.png" alt="4x" class="brand__logo" />
+    </a>
+  </div>
+
+  <button
+    type="button"
+    class="navbar__toggle"
+    aria-label="Abrir menú"
+    aria-controls="navbar-menu"
+    [attr.aria-expanded]="isMenuOpen"
+    (click)="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <ul id="navbar-menu" class="navbar__links">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
+    <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+    <li><a routerLink="/faq" routerLinkActive="active">FAQ</a></li>
+    <!--<li><a routerLink="/tutoriales" routerLinkActive="active">Tutoriales</a></li>-->
+    <li class="navbar__cta-item">
+      <a class="navbar__cta" routerLink="/contacto">
+        Solicitar Demo
+        <span class="arrow">→</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
